@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Wheel from './components/Wheel';
+import background from "./images/inside-out.jpg";
+import { Typography } from '@material-ui/core';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{ backgroundImage: `url(${background})` , backgroundSize: "cover",height: "100vh",}}>
+      <Typography variant="h1" component="h2" style={{color:'white',fontFamily:'IntensaFuente'}}>
+  Inside Out Germán
+</Typography>;
+      <Wheel/>
+      
     </div>
   );
 }
